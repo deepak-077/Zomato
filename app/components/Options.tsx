@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 function Options(){
     const[active, setActive]= useState("dine");

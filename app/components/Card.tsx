@@ -1,3 +1,5 @@
+"use client"
+import { useRef, useState } from "react";
 const menu= [
     {
         title:"Taj View Restraurants",
@@ -50,8 +52,6 @@ const menu= [
     }
     
 ]
-
-import { useRef, useState } from "react";
 
 function Card() {
   const scrollRef = useRef(null);

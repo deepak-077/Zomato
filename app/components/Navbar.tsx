@@ -1,10 +1,12 @@
+"use client"
+
 import Dropdown from "./Dropdown";
 function Navbar(){
     return(
         <nav className='flex flex-row justify-center items-center  w-full p-2 '>
 
         <div className="flex flex-row items-center w-full  ">
-            <img className='flex-shrink-0 w-[120px] mr-2 md:w-[160px] h-[27px] md:mr-4' src={zomato} alt="" />
+            <img className='flex-shrink-0 w-[120px] mr-2 md:w-[160px] h-[27px] md:mr-4' src="zomato.png" alt="logo" />
 
             <div className="hidden md:flex flex-row items-center flex-1 gap-4 shadow-lg"> 
                 

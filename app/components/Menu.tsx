@@ -1,5 +1,6 @@
+"use client"
+
 import { useState } from "react";
-import zomato from './Zomato.png'
 
 function Menu() {
 
@@ -37,7 +38,7 @@ function Menu() {
       </button>
 
 
-      <img className='border-2 self-end w-[200px] h-[35px] md:w-[160px] h-[27px] ' src={zomato} alt="" /> 
+      <img className='border-2 self-end w-[200px] h-[35px] md:w-[160px] h-[27px] ' src="zomato.png" alt="" /> 
 
     </div>
       
