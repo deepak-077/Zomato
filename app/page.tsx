@@ -6,6 +6,7 @@ import FilterButtons from "./components/FilterButtons";
 import Menu from "./components/Menu";
 import Restaurants from "./components/Restraurants";
 import Options from "./components/Options";
+import Login from "./components/Login";
 
 
 
@@ -39,10 +40,14 @@ export default function Home() {
 
     <div className='text-[30px] mt-[10px] mb-[30px] '>Restaurants in Agra</div>
     <Restaurants/>
+    <Login/>
 
   
     </div>
 
+
+
+    {/* mobile menu */}
     {/* hamburger icon */}
     <div className='md:hidden'>
       <Menu/>

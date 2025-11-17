@@ -8,7 +8,6 @@ function Dropdown(){
         console.log("hello")
         setIsOpen(prev =>!prev)
     }
-
     return(
         <div className="flex flex-row relative">
         <img className="absolute left-3 top-1/2 transform -translate-y-1/2 w-[20px] h-[20px]" src="placeholder.png" alt="" />

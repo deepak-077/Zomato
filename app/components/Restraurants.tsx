@@ -102,9 +102,9 @@ const restrautant=[
 
 function Restaurants() {
     return (
-        <div className="grid grid-cols-3  gap-4 p-4">
+        <div className="grid grid-cols-3 gap-4 p-4">
             {restrautant.map((item, index) => (
-                <div key={index} className="bg-white shadow w-full max-w-[350px] mx-auto">
+                <div key={index} className="bg-white shadow w-full max-w-[350px] mx-auto rounded-2xl">
                     <img
                         className="rounded-2xl w-full h-[248px] object-cover"
                         src={item.img}
