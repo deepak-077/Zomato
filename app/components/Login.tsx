@@ -45,8 +45,8 @@ function Login(){
                 </div>
 
                 {/* sign in with google */}
-                <div className="w-[400px] h-[68px]">
-                    <div className="flex items-center justify-center w-[400px] h-11">
+                <div className="w-[400px] h-[68px] ">
+                    <div className="flex items-center justify-center w-[400px] h-11 border rounded-lg">
                         <img className="size-[18px]" src="google.png" alt="" />
                         <span className="w-[129px] h-4 text-sm ml-2">Sign in with Google</span>
                     </div>

@@ -7,8 +7,7 @@ import Menu from "./components/Menu";
 import Restaurants from "./components/Restraurants";
 import Options from "./components/Options";
 import Login from "./components/Login";
-
-
+import Signup from "./components/Signup";
 
 
 export default function Home() {
@@ -41,6 +40,7 @@ export default function Home() {
     <div className='text-[30px] mt-[10px] mb-[30px] '>Restaurants in Agra</div>
     <Restaurants/>
     <Login/>
+    <Signup/>
 
   
     </div>
