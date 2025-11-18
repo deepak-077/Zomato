@@ -9,7 +9,7 @@ function Signup(){
             </section>
 
             {/* form */}
-            <section className="w-[400px] h-[394px] mt-6">
+            <section className="flex flex-col gap-1 w-[400px] h-[394px] mt-6">
 
                 {/* FullName */}
                 <div className="flex flex-col  items-center  w-full max-w-[400px] h-16  ">
@@ -53,8 +53,6 @@ function Signup(){
                     <span className="text-[#EF4F5F]">Log in</span>
                 </div>
                 
-
-
             </section>
 
         </div>

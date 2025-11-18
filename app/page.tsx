@@ -39,8 +39,6 @@ export default function Home() {
 
     <div className='text-[30px] mt-[10px] mb-[30px] '>Restaurants in Agra</div>
     <Restaurants/>
-    <Login/>
-    <Signup/>
 
   
     </div>

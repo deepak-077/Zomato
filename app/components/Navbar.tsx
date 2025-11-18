@@ -1,7 +1,25 @@
 "use client"
 
+import { useState } from "react";
 import Dropdown from "./Dropdown";
+import Login from "./Login";
+import Signup from "./Signup";
+
 function Navbar(){
+    const [login, setLogin] = useState(false);
+    const [signup, setSignup] = useState(false);
+
+    function handleLogin(){
+        setLogin(prev=>!prev)
+    }
+
+    function handleSignup(){
+        setSignup(prev=>!prev)
+    }
+    function handleClose(){
+        setLogin(false)
+    }
+
     return(
         <nav className='flex flex-row justify-center items-center  w-full p-2 '>
 
@@ -24,13 +42,30 @@ function Navbar(){
     
             </div>
             <div className="flex items-center gap-4 ml-4 whitespace-nowrap">
-            <button className="w-full h-[40px] p-2 text-gray-500 ">Log in</button>
-             <button className=" w-full h-[40px] p-2 text-gray-500 ">Sign up</button>
-
+                <button className="w-full h-10 p-2 text-gray-500" onClick={handleLogin}>Log in</button>
+                <button className="w-full h-10 p-2 text-gray-500" onClick={handleSignup}>Sign up</button>
             </div>
            
 
-        </div>        
+        </div> 
+
+        {/* rendering signup component */}
+        {signup && (
+            <div className="fixed inset-0  bg-opacity-50 z-50 flex justify-center items-center">
+                <div className="relative flex justify-center items-center bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+                    <Signup/>
+                </div>
+            </div>
+        )}
+        {/* rendering login component */}
+        {login && (
+            <div className="fixed inset-0 z-50 flex justify-center items-center">
+                <div className="relative flex justify-center items-center bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+                    <Login/>
+                </div>
+            </div>
+        )}
+        
         </nav>
 
     )
