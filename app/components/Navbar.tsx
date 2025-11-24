@@ -1,12 +1,13 @@
 "use client"
 
 import { useState } from "react";
-
+import { useSession,signOut } from "next-auth/react";
 import Dropdown from "./Dropdown";
 import Signin from "./Signin";
 import Signup from "./Signup";
 
 function Navbar(){
+    const {data:session}=useSession();
     const [login, setLogin] = useState(false);
     const [signup, setSignup] = useState(false);
 
@@ -43,8 +44,23 @@ function Navbar(){
     
             </div>
             <div className="flex items-center gap-4 ml-4 whitespace-nowrap">
-                <button className="w-full h-10 p-2 text-gray-500" onClick={handleLogin}>Log in</button>
-                <button className="w-full h-10 p-2 text-gray-500" onClick={handleSignup}>Sign up</button>
+                {session ? (
+                    <div>
+                        <div className="flex items-center gap-2">
+                            <img src={session.user?.image} alt={session.user?.name} className="size-10 rounded-full"/>
+                            <span>{session.user?.name}</span>
+                            <button className="text-gray-400" onClick={()=>signOut({callbackUrl:"/"})}>Logout</button>
+
+                        </div>
+
+                    </div>
+                ):(
+                    <div>
+                        <button className="w-full h-10 p-2 text-gray-500" onClick={handleLogin}>Log in</button>
+                        <button className="w-full h-10 p-2 text-gray-500" onClick={handleSignup}>Sign up</button>
+                    </div>
+                )}
+                
             </div>
            
 
