@@ -1,10 +1,10 @@
-function Signup(){
+function Signup({setSignup}){
     return(
         <div className="w-md h-[512px] pt-0 px-6 py-6 ">
             <section className="flex justify-between items-center">
                 <h2 className="text-[30px]">Signup</h2>
                 <div className="flex justify-center items-center w-[30px] h-[30px]">
-                    <img className="w-6 h-6" src="x.png" alt="" />
+                    <img onClick={()=>setSignup(false)} className="w-6 h-6" src="x.png" alt="" />
                 </div>
             </section>
 
@@ -29,7 +29,7 @@ function Signup(){
                 </div>
 
                 {/* Create Account */}
-                <div className="w-[400px] h-11 px-4 bg-[#EF4F5F] text-white text-center rounded-lg"> Create account </div>
+                <div className="w-[400px] h-11 px-4 bg-[#EF4F5F] text-white flex justify-center items-center rounded-lg"> Create account </div>
 
                 {/* or */}
                 <div className="flex justify-between items-center w-[400px] h-[17px] mb-6">

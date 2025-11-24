@@ -1,10 +1,11 @@
-function Login(){
+import { signIn } from "next-auth/react"
+function Signin({setLogin}){
     return(
         <div className="flex flex-col  w-md h-[468px] pt-0 px-6 py-6 ">
             <section className="flex justify-between items-center">
                 <h2 className="text-[30px]">Login</h2>
                 <div className="flex justify-center items-center w-[30px] h-[30px]">
-                    <img className="w-6 h-6" src="x.png" alt="" />
+                    <img onClick={()=>setLogin(false)} className="w-6 h-6" src="x.png" alt="" />
                 </div>
             </section>
 
@@ -29,7 +30,7 @@ function Login(){
                 </div>
 
                 {/* otp button */}
-                <div className="w-[400px] h-11 px-4 bg-[#EF4F5F] text-white text-center rounded-lg"> Send One Time Password </div>
+                <div className="w-[400px] h-11 px-4 bg-[#EF4F5F] text-white text-center rounded-lg flex justify-center items-center"> Send One Time Password </div>
 
                 {/* or */}
                 <div className="flex justify-between items-center w-[400px] h-[17px] mb-6">
@@ -40,13 +41,16 @@ function Login(){
 
                 {/* sign in with email */}
                 <div className="flex items-center justify-center w-[400px] h-[43px] border rounded-lg">
-                    <img className="size-[18px]" src="mail.png" alt="" />
-                    <span className="w-[129px] h-4 text-sm ml-2">Continue with Email</span>
+                    <img className="size-[18px] " src="mail.png" alt="" />
+                    <span className="w-[129px] h-4 text-sm ml-2 ">Continue with Email</span>
                 </div>
 
                 {/* sign in with google */}
                 <div className="w-[400px] h-[68px] ">
-                    <div className="flex items-center justify-center w-[400px] h-11 border rounded-lg">
+                    <div className="flex items-center justify-center w-[400px] h-11 border rounded-lg cursor-pointer" onClick={()=>{
+        
+                        signIn("google", {callbackUrl:"/"})
+                    }}>
                         <img className="size-[18px]" src="google.png" alt="" />
                         <span className="w-[129px] h-4 text-sm ml-2">Sign in with Google</span>
                     </div>
@@ -67,4 +71,4 @@ function Login(){
     )
 
 }
-export default Login
+export default Signin

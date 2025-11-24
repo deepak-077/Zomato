@@ -6,7 +6,7 @@ import FilterButtons from "./components/FilterButtons";
 import Menu from "./components/Menu";
 import Restaurants from "./components/Restraurants";
 import Options from "./components/Options";
-import Login from "./components/Login";
+import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 
 

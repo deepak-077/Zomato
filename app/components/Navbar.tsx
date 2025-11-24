@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react";
+
 import Dropdown from "./Dropdown";
-import Login from "./Login";
+import Signin from "./Signin";
 import Signup from "./Signup";
 
 function Navbar(){
@@ -53,7 +54,7 @@ function Navbar(){
         {signup && (
             <div className="fixed inset-0  bg-opacity-50 z-50 flex justify-center items-center">
                 <div className="relative flex justify-center items-center bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-                    <Signup/>
+                    <Signup setSignup={setSignup}/>
                 </div>
             </div>
         )}
@@ -61,7 +62,7 @@ function Navbar(){
         {login && (
             <div className="fixed inset-0 z-50 flex justify-center items-center">
                 <div className="relative flex justify-center items-center bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-                    <Login/>
+                    <Signin setLogin={setLogin}/>
                 </div>
             </div>
         )}
