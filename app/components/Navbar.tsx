@@ -10,6 +10,7 @@ function Navbar(){
     const {data:session}=useSession();
     const [login, setLogin] = useState(false);
     const [signup, setSignup] = useState(false);
+    const [drop,setDrop] = useState(false);
 
     function handleLogin(){
         setLogin(prev=>!prev)
@@ -20,6 +21,10 @@ function Navbar(){
     }
     function handleClose(){
         setLogin(false)
+    }
+
+    function handleDrop(){
+        setDrop(prev=>!prev)
     }
 
     return(
@@ -43,17 +48,24 @@ function Navbar(){
             </div>
     
             </div>
-            <div className="flex items-center gap-4 ml-4 whitespace-nowrap">
+            <div className="flex items-center gap-4 ml-4 whitespace-nowrap relative">
                 {session ? (
-                    <div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2" onClick={handleDrop}>
                             <img src={session.user?.image} alt={session.user?.name} className="size-10 rounded-full"/>
                             <span>{session.user?.name}</span>
-                            <button className="text-gray-400" onClick={()=>signOut({callbackUrl:"/"})}>Logout</button>
+                            <span> <img className={`size-[16px] transition-all duration-300 ${drop? "rotate-180":"rotate-0"}`} src="down.png" alt="" /></span>
+                            
+                            {/* dropdown */}
+                                <div className={`flex flex-col text-[15px] absolute top-10 justify-center right-0 transition-all duration-300 bg-white shadow-lg rounded-lg w-full max-w-40 transform ${drop? "translate-y-2 opacity-100":"opacity-0 -translate-y-2"}`}>
+                                    <div className="p-2.5">Profile</div>
+                                    <div className="p-2.5">Reviews</div>
+                                    <div className="p-2.5">Settings</div>
+                                    <div className="p-2.5" onClick={()=>signOut({callbackUrl:"/"})}>Logout</div>
+                                </div>
+                            
 
+                            
                         </div>
-
-                    </div>
                 ):(
                     <div>
                         <button className="w-full h-10 p-2 text-gray-500" onClick={handleLogin}>Log in</button>

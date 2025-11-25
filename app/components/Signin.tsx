@@ -24,9 +24,7 @@ function Signin({setLogin}){
                         </div>
 
                     </div>
-
                     <input className="py-0.5 px-[1px] text-start" type="number" name="" id="" placeholder="Phone" />
-
                 </div>
 
                 {/* otp button */}
@@ -62,9 +60,6 @@ function Signin({setLogin}){
                     <span>New to Zomato?</span>
                     <span className="text-[#EF4F5F]">Create account</span>
                 </div>
-                
-
-
             </section>
 
         </div>
