@@ -5,6 +5,7 @@ import { useSession,signOut } from "next-auth/react";
 import Dropdown from "./Dropdown";
 import Signin from "./Signin";
 import Signup from "./Signup";
+import Image from "next/image";
 
 function Navbar(){
     const {data:session}=useSession();
@@ -51,7 +52,7 @@ function Navbar(){
             <div className="flex items-center gap-4 ml-4 whitespace-nowrap relative">
                 {session ? (
                         <div className="flex items-center gap-2" onClick={handleDrop}>
-                            <img src={session.user?.image} alt={session.user?.name} className="size-10 rounded-full"/>
+                            <img src={session.user?.image?? ""} alt={session.user?.name ??"username"} className="size-10 rounded-full"/>
                             <span>{session.user?.name}</span>
                             <span> <img className={`size-[16px] transition-all duration-300 ${drop? "rotate-180":"rotate-0"}`} src="down.png" alt="" /></span>
                             
@@ -61,10 +62,7 @@ function Navbar(){
                                     <div className="p-2.5">Reviews</div>
                                     <div className="p-2.5">Settings</div>
                                     <div className="p-2.5" onClick={()=>signOut({callbackUrl:"/"})}>Logout</div>
-                                </div>
-                            
-
-                            
+                                </div> 
                         </div>
                 ):(
                     <div>

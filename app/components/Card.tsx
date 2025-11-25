@@ -54,7 +54,7 @@ const menu= [
 ]
 
 function Card() {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
 
   const handleScrollRight = () => {

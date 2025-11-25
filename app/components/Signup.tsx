@@ -1,4 +1,4 @@
-function Signup({setSignup}){
+function Signup({setSignup}:{setSignup:any}){
     return(
         <div className="w-md h-[512px] pt-0 px-6 py-6 ">
             <section className="flex justify-between items-center">

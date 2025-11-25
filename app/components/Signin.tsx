@@ -1,5 +1,5 @@
 import { signIn } from "next-auth/react"
-function Signin({setLogin}){
+function Signin({setLogin}:{setLogin:any}){
     return(
         <div className="flex flex-col  w-md h-[468px] pt-0 px-6 py-6 ">
             <section className="flex justify-between items-center">
