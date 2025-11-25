@@ -28,19 +28,19 @@ This app replicates the core functionality and UI experience of Zomato’s food 
 - Responsive navbar with Sign In / User dropdown
 - UI closely matches the original Zomato website pixel by pixel for large screen
 
-### 🚀 **Deployment**
+###  **Deployment 🚀**
 - Deployed on **Vercel** with optimized build output
 
 ---
 
 ## 🛠️ Tech Stack
 
- **Next.js for Routing 
- **React 18** as frontend framework 
- **Tailwind CSS** for Styling 
- **NextAuth.js** for Google OAuth authentication
- **Vercel** for Hosting 
- **TypeScript** for Type safety 
+ **Next.js for Routing |  
+ **React 18** as frontend framework |  
+ **Tailwind CSS** for Styling |  
+ **NextAuth.js** for Google OAuth authentication |  
+ **Vercel** for Hosting |  
+ **TypeScript** for Type safety |  
 
 
 
