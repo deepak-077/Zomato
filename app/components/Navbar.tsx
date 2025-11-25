@@ -35,11 +35,8 @@ function Navbar(){
             <img className='flex-shrink-0 w-[120px] mr-2 md:w-[160px] h-[27px] md:mr-4' src="zomato.png" alt="logo" />
 
             <div className="hidden md:flex flex-row items-center flex-1 gap-4 shadow-lg"> 
-                
-                <div className="flex-shrink min-w-[150px] md:min-w-[180px]" >
-
+                <div className="flex-shrink min-w-[150px] md:min-w-[180px]">
                <Dropdown/>
-                
                 </div>   
             
             {/* search bar */}
@@ -72,8 +69,6 @@ function Navbar(){
                 )}
                 
             </div>
-           
-
         </div> 
 
         {/* rendering signup component */}
@@ -92,10 +87,7 @@ function Navbar(){
                 </div>
             </div>
         )}
-        
         </nav>
-
     )
 }
-
 export default Navbar;
